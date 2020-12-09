@@ -12,7 +12,7 @@ import Portfolio from '../components/Portfolio';
 import Blog from '../components/Blog';
 import Footer from '../components/Footer';
 
-import { IBlogpost } from './types';
+import { IBlogpost } from '../types/types.blog';
 
 interface Props {
   data: IBlogpost[];

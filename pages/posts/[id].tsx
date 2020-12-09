@@ -10,16 +10,22 @@ import html5 from 'highlight.js/lib/languages/vbscript-html';
 import strapi from '../../services/strapi';
 
 import GlobalStyle from '../../styles/global';
-import { Container, Post } from './styles';
+import { Container, Post } from '../../styles/pages/posts/styles';
 
 import Header from '../../components/Header';
+
+// import Footer from '../../components/Footer';
+
+import { IBlogpost } from '../../types/types.blog';
 
 hljs.registerLanguage('typescript', typescript);
 hljs.registerLanguage('html', html5);
 
-// import Footer from '../../components/Footer';
+interface Props {
+  data: IBlogpost;
+}
 
-const Blogpost: React.FC = ({ data }) => {
+const Blogpost: React.FC<Props> = ({ data }) => {
   useEffect(() => {
     hljs.initHighlighting();
   }, []);
