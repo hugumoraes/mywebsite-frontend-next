@@ -28,6 +28,11 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap"
             rel="stylesheet"
           />
+          <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/dracula.min.css"
+          />
+          <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js" />
           {this.props.styleTags}
         </Head>
         <body>

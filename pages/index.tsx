@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import strapi from '../services/strapi';
 
 import GlobalStyle from '../styles/global';
@@ -10,19 +10,15 @@ import Header from '../components/Header';
 import Biography from '../components/Biography';
 import Portfolio from '../components/Portfolio';
 import Blog from '../components/Blog';
+import Footer from '../components/Footer';
 
-// import Footer from '../../components/Footer';
+import { IBlogpost } from './types';
 
-interface IBlogpost {
-  id: string;
-  title: string;
-  content: string;
-  published: string;
-  createdAt: string;
-  cover: string;
+interface Props {
+  data: IBlogpost[];
 }
 
-const Main: React.FC = ({ data }) => {
+const Main: React.FC<Props> = ({ data }) => {
   return (
     <>
       <Header />
@@ -32,13 +28,8 @@ const Main: React.FC = ({ data }) => {
 
         {data.length ? <Blog blogposts={data} /> : <h1>Loading</h1>}
       </Container>
-      {/*
-      <Container>
-        <PortfolioGrid />
+      <Footer />
 
-        {blogposts.length ? <BlogUI blogposts={blogposts} /> : <h1>Loading</h1>}
-      </Container>
-      <Footer /> */}
       <GlobalStyle />
     </>
   );

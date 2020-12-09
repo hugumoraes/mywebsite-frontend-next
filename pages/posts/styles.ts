@@ -1,3 +1,4 @@
+import { url } from 'inspector';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -74,8 +75,6 @@ export const Post = styled.div`
       width: 980px;
       code {
         span {
-          font-size: 1.2rem;
-          line-height: 1.2rem;
           color: #f2f2f2;
         }
       }

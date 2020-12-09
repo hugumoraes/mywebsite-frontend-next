@@ -20,7 +20,7 @@ const Header: React.FC = () => {
     },
     {
       name: 'Contact',
-      href: '/contact-me',
+      href: '/contact',
     },
   ];
 
